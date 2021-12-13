@@ -1,0 +1,61 @@
+{
+  "name": "test-sls-plugin",
+  "version": "0.1.0",
+  "description": "Plugin library for seeding Aurora DB mysql",
+  "main": "src/index.js",
+  "keywords": [
+    "serverless",
+    "auroradb",
+    "seed",
+    "aws",
+    "amazon-web-services",
+    "serverless-framework",
+    "serverless-plugin",
+    "sls"
+  ],
+  "repository": {
+    "type": "git"
+  },
+  "author": "xander",
+  "license": "ISC",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "./node_modules/.bin/nyc --reporter=lcov --reporter=text ./node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "dateformat": "^5.0.2",
+    "migrate": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^7.25.0",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
+    "sinon": "^10.0.0"
+  },
+  "peerDependencies": {
+    "serverless": "2.x"
+  },
+  "engines": {
+    "node": ">=10.0"
+  },
+  "nyc": {
+    "extension": [],
+    "require": [],
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [],
+    "reporter": [
+      "text"
+    ],
+    "all": true,
+    "check-coverage": true,
+    "branches": 90,
+    "lines": 90,
+    "functions": 90,
+    "statements": 90
+  }
+}
